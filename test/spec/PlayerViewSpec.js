@@ -38,4 +38,15 @@ describe('PlayerView', function() {
     });
   });
 
+  describe('Enqueueing', function() {
+    it('Enqueues a song when user clicks on it', function(){
+      var songQueue = appView.model.get('songQueue');
+      expect(songQueue.length).toEqual(0);
+      library.at(0).enqueue();
+      expect(songQueue.length).toEqual(1);
+      library.at(1).enqueue();
+      expect(songQueue.length).toEqual(2);
+    });
+  });
+
 });
