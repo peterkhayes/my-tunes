@@ -10,14 +10,13 @@ var SongQueue = Songs.extend({
     }, this);
     this.on('ended', function(song) {
       this.shift();
-      this.playFirst();
+      if (this.length) {
+        this.playFirst();
+      }
     }, this);
   },
 
   playFirst: function(){
-    var toPlay = this.at(0);
-    if (toPlay) {
-      toPlay.play();
-    }
+    this.at(0).play();
   }
 });
