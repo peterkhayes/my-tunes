@@ -8,10 +8,14 @@ var SongQueue = Songs.extend({
         this.playFirst();
       }
     }, this);
+    this.on('ended', function(song) {
+      this.shift();
+      this.playFirst();
+    }, this);
   },
 
   playFirst: function(){
-    var toPlay = this.at(1);
+    var toPlay = this.at(0);
     if (toPlay) {
       toPlay.play();
     }
