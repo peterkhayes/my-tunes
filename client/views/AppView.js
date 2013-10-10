@@ -14,6 +14,7 @@ var AppView = Backbone.View.extend({
   },
 
   render: function(){
+    this.$el.addClass('app');
     return this.$el.html([
       this.currentSongHeaderView.$el,
       this.playerView.$el,

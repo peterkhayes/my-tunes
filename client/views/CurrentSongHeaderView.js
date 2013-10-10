@@ -11,6 +11,7 @@ var CurrentSongHeaderView = Backbone.View.extend({
   template: _.template('<%= artist %> - <%= title %>'),
 
   render: function(){
+    this.$el.addClass('currentSongHeader');
     if (this.model.get('title')) {
       return this.$el.html(this.template(this.model.attributes));
     } else {

@@ -1,3 +1,29 @@
-tr {
-  cursor: pointer;
+.container {
+  text-align: center;
 }
+
+.app {
+  width: 500px;
+  margin: 100px auto;
+}
+
+.library, .songQueue {
+  margin:0px auto;
+  width:300px;
+  font-size: 24px;
+}
+
+.libraryEntry, .songQueueEntry {
+  font-size: 14px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.artist {
+  font-weight: bold;
+}
+
+.title {
+  font-style: italic;
+}
+
